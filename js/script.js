@@ -8,7 +8,7 @@ const { createApp } = Vue
     },
 
     created() {
-       this.
+       this.GenerateEmails(10);
     },
 
 
@@ -19,10 +19,10 @@ const { createApp } = Vue
                 axios.get("https://flynn.boolean.careers/exercises/api/random/mail").then((res) => {
                     let RandomEmails = res.data.response;
                     this.EmailsArray.push(RandomEmails);
-                })
+                });
                 
             }
-        }
+        },
 
     },
 
